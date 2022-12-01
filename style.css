@@ -161,6 +161,7 @@ input[type="submit"]:hover,
 }
 
 
+
 /* ============= For Authentication Style ============= */
 .signInArea {
     display: flex;
@@ -196,6 +197,7 @@ input[type="submit"]:hover,
     right: -46px;
     z-index: -1;
 }
+
 
 
 /* ============= For Dashboard Layout ============= */
@@ -255,6 +257,7 @@ input[type="submit"]:hover,
 
 
 
+/* ============= For Title Area ============= */
 .titleArea {
     display: flex;
     justify-content: space-between;
@@ -287,17 +290,25 @@ input[type="submit"]:hover,
     color: var(--textColor);
     margin: 0;
 }
-.titleArea .user img{
+.titleArea .user .userImage {
+    display: inline-flex;
+}
+.titleArea .user img {
     width: 40px;
     height: 40px;
     border-radius: 50%;
 }
+
+
+
 .contentArea {
     padding: 20px;
     background-color: var(--bgColor);
     border-radius: 5px;
     margin-top: 30px;
 }
+
+
 
 /* ============= For User List ============= */
 .userListHeader {
