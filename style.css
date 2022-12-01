@@ -1,0 +1,445 @@
+:root {
+    --primaryColor: #7367f0;
+    --primaryColorLight: rgb(115, 103, 240, 0.5);
+    --secondaryColor: #ffffff;
+    --titleColor: #1e272e;
+    --textColor: #485460;
+    --textColorLight: #d2dae2;
+    --bgColor: #ffffff;
+    --bodyBgColor: #f8f8f8;
+    --borderColor: #d8d6de;
+    --borderColorLight: #efefef;
+
+    --boxShadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
+    --inputFocusShadow: 0 3px 10px 0 rgb(34 41 47 / 10%);
+    --buttonHoverShadow: 0 8px 25px -8px var(--primaryColor);
+
+    --primaryFont: 'Ubuntu', sans-serif;
+    --titleFontSize: 18px;
+    --titleFontSizeTab: 16px;
+    --titleFontSizeMob: 14px;
+    --textFontSize: 14px;
+    --textFontSizeMob: 12px;
+    --fontLight: 300;
+    --fontRegular: 400;
+    --fontMedium: 500;
+    --fontSemiBold: 600;
+}
+* {
+    box-sizing: border-box;
+    font-family: var(--primaryFont);
+}
+body {
+    background-color: var(--bodyBgColor);
+    margin: 0;
+}
+.title {
+    font-size: var(--titleFontSize);
+    font-weight: var(--fontMedium);
+    color: var(--textColor);
+    margin: 0 0 20px;
+}
+.card {
+    background: var(--bgColor);
+    padding: 30px;
+    border-radius: 5px;
+    box-shadow: var(--boxShadow);
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+li{
+    margin: 10px 0;
+}
+a {
+    text-decoration: none;
+    color: var(--textColor);
+    transition: all 0.3s;
+}
+a:hover {
+    color: var(--primaryColor);
+}
+button {
+    padding: 0;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+svg {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+thead tr {
+    background-color: var(--bodyBgColor);
+    font-weight: var(--fontSemiBold);
+    font-size: var(--textFontSize);
+}
+thead tr th {
+    padding: 10px;
+}
+tbody tr {
+    font-size: var(--textFontSize);
+}
+tbody tr td {
+    padding: 10px;
+    font-size: var(--textFontSize);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+}
+tbody td p {
+    margin: 0;
+}
+
+
+
+/* ============= For Form Content ============= */
+.inputBox {
+    position: relative;
+    margin-bottom: 20px;
+}
+label {
+    font-size: 12px;
+    color: var(--textColor);
+    font-weight: var(--fontRegular);
+    display: block;
+    margin-bottom: 8px;
+}
+input, textarea, select {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: var(--textFontSize);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+    border: 1px solid var(--borderColor);
+    padding: 0 10px;
+    border-radius: 5px;
+    transition: all 0.3s;
+}
+input:focus, textarea:focus, select:focus {
+    outline: none;
+    border-color: var(--primaryColor);
+    box-shadow: var(--inputFocusShadow);
+    padding: 0 12px;
+}
+select {
+    appearance: none;
+    padding: 0 30px 0 10px;
+}
+textarea {
+    height: 100px;
+    padding: 10px;
+}
+input::placeholder, textarea::placeholder {
+    color: var(--textColorLight);
+    font-weight: var(--fontRegular);
+}
+
+input[type="submit"],
+.primaryButton {
+    width: 100%;
+    height: 38px;
+    line-height: 38px;
+    font-size: var(--textFontSize);
+    font-weight: var(--fontMedium);
+    color: var(--secondaryColor);
+    border: none;
+    border-radius: 5px;
+    padding: 0 20px;
+    background-color: var(--primaryColor);
+    cursor: pointer;
+    transition: all 0.3s;
+}
+input[type="submit"]:hover,
+.primaryButton:hover {
+    box-shadow: var(--buttonHoverShadow);
+}
+
+
+/* ============= For Authentication Style ============= */
+.signInArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+.signInArea .card {
+    width: 400px;
+    margin: 0 auto;
+    padding: 30px 30px 40px;
+    position: relative;
+}
+.signInArea .card::before {
+    content: '';
+    background-image: url(./images/authTopShape.png);
+    width: 160px;
+    height: 160px;
+    background-size: cover;
+    position: absolute;
+    top: -54px;
+    left: -46px;
+    z-index: -1;
+}
+.signInArea .card::after {
+    content: '';
+    background-image: url(./images/authBottomShape.png);
+    width: 190px;
+    height: 190px;
+    background-size: cover;
+    position: absolute;
+    bottom: -54px;
+    right: -46px;
+    z-index: -1;
+}
+
+
+/* ============= For Dashboard Layout ============= */
+.dashboardArea {
+    display: flex;
+    width: 100%;
+}
+
+
+
+/* ============= For Sidebar ============= */
+.sidebarArea .logo {
+    margin-bottom: 30px;
+}
+.sidebarArea {
+    width: 250px;
+    background-color: var(--bgColor);
+    padding: 20px;
+    height: 100vh;
+}
+.sidebarArea li {
+    margin: 10px 0;
+    padding-left: 0px;
+    transition: all 0.3s;
+}
+.sidebarArea li a {
+    display: flex;
+    align-items: center;
+    height: 38px;
+    line-height: 38px;
+    padding: 0 15px;
+    border-radius: 5px;
+    box-shadow: none;
+    transition: all 0.3s;
+}
+.sidebarArea li a.active,
+.sidebarArea li a:hover {
+    background-color: var(--primaryColor);
+    color: var(--secondaryColor);
+    box-shadow: 0 0px 15px var(--primaryColorLight);
+}
+.sidebarArea li a:hover {
+    padding-left: 20px;
+}
+
+
+
+/* ============= For Main Content ============= */
+.mainArea {
+    width: calc(100% - 250px);
+    padding: 30px;
+}
+.mainArea .container {
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+
+
+.titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    /* box-shadow: var(--boxShadow); */
+}
+.titleArea .title {
+    margin-bottom: 0;
+}
+.titleArea .user {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.titleArea .user .userDetails {
+    text-align: right;
+}
+.titleArea .user .userName {
+    font-size: var(--textFontSize);
+    font-weight: var(--fontMedium);
+    color: var(--titleColor);
+    margin: 0 0 5px;
+}
+.titleArea .user .userDesignation {
+    font-size: var(--textFontSizeMob);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+    margin: 0;
+}
+.titleArea .user img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.contentArea {
+    padding: 20px;
+    background-color: var(--bgColor);
+    border-radius: 5px;
+    margin-top: 30px;
+}
+
+/* ============= For User List ============= */
+.userListHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.userListHeader .userSearch {
+    width: 300px;
+}
+.userListBody .userListTable {
+    width: 100%;
+    border-collapse: collapse;
+    text-align: left;
+}
+.userListBody .Designation,
+.userListBody .Status,
+.userListBody .Actions {
+    max-width: 100px;
+}
+.userListBody .User {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.userListBody .User img{
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}
+.userListBody .User .userName {
+    font-weight: var(--fontMedium);
+    color: var(--titleColor);
+    margin: 0 0 5px;
+}
+.userListBody tbody tr:not(:last-child) {
+    border-bottom: 1px solid var(--borderColorLight);
+}
+
+
+
+
+/* ============= For Table ============= */
+
+
+
+/* ============= Responsive Design ============= */
+@media (max-width: 1299px) {
+    .sidebarArea {
+        width: 80px;
+    }
+    .sidebarArea li a {
+        font-size: 0;
+        padding: 0;
+        justify-content: center;
+    }
+    .sidebarArea li a:hover {
+        padding: 0;
+    }
+    .sidebarArea li a svg {
+        margin: 0;
+    }
+    .mainArea {
+        width: calc(100% - 80px);
+        padding: 25px;
+    }
+}
+
+@media (max-width: 767px) {
+    :root {
+        --titleFontSize: 16px;
+        --textFontSize: 12px;
+    }
+    input, textarea, select, input[type="submit"] {
+        height: 32px;
+        line-height: 32px;
+        padding: 0 8px;
+        border-radius: 3px;
+    }
+    input:focus, textarea:focus, select:focus {
+        padding: 0 10px;
+    }
+    select {
+        padding: 0 24px 0 8px;
+    }
+    textarea {
+        height: 60px;
+        padding: 8px;
+    }
+
+
+    /* For sign in */
+    .signInArea .card {
+        max-width: 300px;
+        padding: 25px 20px;
+    }
+    .signInArea .card::before {
+        width: 110px;
+        height: 110px;
+        top: -30px;
+        left: -30px;
+    }
+    .signInArea .card::after {
+        width: 140px;
+        height: 140px;
+        bottom: -30px;
+        right: -30px;
+    }
+
+
+    /* For dashboard */
+    .dashboardArea {
+        flex-direction: column-reverse;
+    }
+    .sidebarArea {
+        width: 100%;
+        height: auto;
+        position: fixed;
+        bottom: 0;
+    }
+    .sidebarArea .logo {
+        display: none;
+    }
+    .sidebarArea ul {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 20px;
+    }
+    .sidebarArea li {
+        margin: 0;
+    }
+    .sidebarArea li:last-child {
+        display: none;
+    }
+    .sidebarArea li a {
+        width: 40px;
+        height: 40px;
+        align-items: center;
+    }
+    .mainArea {
+        width: 100%;
+    }
+}
