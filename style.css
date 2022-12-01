@@ -342,7 +342,7 @@ input[type="submit"]:hover,
     padding: 20px;
     background-color: var(--bgColor);
     border-radius: 5px;
-    margin-top: 30px;
+    margin-top: 20px;
 }
 
 
@@ -397,9 +397,103 @@ input[type="submit"]:hover,
 
 
 
+/* ============= For User Detail ============= */
+.userDetailArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 34px;
+}
+.userDetailArea .leftSide {
+    width: 380px;
+    position: fixed;
+}
+.userDetailArea .leftSide .contentArea {
+    padding: 40px 30px 30px;
+}
+.userDetailArea .userIdentity {
+    text-align: center;
+}
+.userDetailArea .userIdentity img {
+    width: 120px;
+    height: 120px;
+    border-radius: 5px;
+}
+.userDetailArea .userIdentity .title {
+    margin: 15px 0 10px;
+}
+.userDetailArea .userIdentity .designation {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
+}
+.userDetailArea .userHeighlight {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 40px;
+    margin: 25px 0 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid var(--borderColorLight);
+}
+.userDetailArea .userHeighlight .iconCard {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+}
+.userDetailArea .userHeighlight .iconCard .icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 5px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(113, 102, 240, 0.1);
+}
+.userDetailArea .userHeighlight .iconCard svg {
+    margin: 0;
+    stroke: var(--primaryColor);
+}
+.userDetailArea .userHeighlight .count {
+    font-size: var(--textFont);
+    font-weight: var(--fontMedium);
+    margin: 0;
+}
+.userDetailArea .userHeighlight .title {
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
+}
+.userDetailArea .userDetail li {
+    font-size: var(--textFont);
+    font-weight: var(--fontMedium);
+    line-height: 24px;
+}
+.userDetailArea .userDetail li span {
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+}
+.userDetailArea .buttonArea {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    padding-top: 20px;
+    border-top: 1px solid var(--borderColorLight);
+    margin-top: 20px;
+}
+.userDetailArea .primaryButton {
+    width: auto;
+}
 
-/* ============= For Table ============= */
 
+.userDetailArea .rightSide {
+    width: calc(100% - 400px);
+    margin-left: 400px;
+}
 
 
 /* ============= Responsive Design ============= */
