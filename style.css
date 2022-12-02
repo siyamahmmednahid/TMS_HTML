@@ -512,10 +512,80 @@ input[type="submit"]:hover,
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
 }
-.todoArea .rightSide .taskDetails .userThumbnail {
+.todoArea .rightSide .taskDetails .userThumb {
     width: 30px;
     height: 30px;
     border-radius: 50%;
+}
+
+
+
+
+
+/* ============= For Email ============= */
+.emailArea .rightSide li {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px 0;
+    margin: 0;
+}
+.emailArea .rightSide li:not(:last-child) {
+    border-bottom: 1px solid var(--borderColorLight);
+}
+.emailArea .rightSide .emailDetail {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    align-items: center;
+}
+.emailArea .rightSide .emailDetail .userThumb {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+.emailArea .rightSide .emailDetail .emailSender {
+    font-size: var(--textFont);
+    font-weight: var(--fontMedium);
+    color: var(--textColor);
+    margin: 0 0 5px;
+}
+.emailArea .rightSide .emailDetail .emailSubject {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
+}
+.emailArea .rightSide .emailDate {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+}
+.emailArea .rightSide .emailDate .labels {
+    display: flex;
+    gap: 5px;
+}
+.emailArea .rightSide .emailDate .labels span {
+    width: 8px;
+    height: 8px;
+    background: var(--primaryColor);
+    border-radius: 50%;
+}
+.emailArea .rightSide .emailDate .labels span.low {
+    background: var(--successColor);
+}
+.emailArea .rightSide .emailDate .labels span.medium {
+    background: var(--warningColor);
+}
+.emailArea .rightSide .emailDate .labels span.high {
+    background: var(--dangerColor);
+}
+.emailArea .rightSide .emailDate .date {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
 }
 
 
