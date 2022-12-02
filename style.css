@@ -10,10 +10,15 @@
     --bodyBgColor: #f8f8f8;
     --borderColor: #d8d6de;
     --borderColorLight: #f5f5f5;
+    --dangerColor: #ff5b5b;
+    --successColor: #28c76f;
+    --warningColor: #ffa21a;
+
 
     --boxShadow: 0 4px 24px 0 rgb(34 41 47 / 10%);
     --inputFocusShadow: 0 3px 10px 0 rgb(34 41 47 / 10%);
     --buttonHoverShadow: 0 8px 25px -8px var(--primaryColor);
+
 
     --primaryFont: 'Ubuntu', sans-serif;
     --titleFont: 18px;
@@ -47,6 +52,8 @@ body {
 
 
 
+
+
 ul {
     list-style: none;
     padding: 0;
@@ -59,6 +66,8 @@ li {
 li:not(:last-child) {
     margin-bottom: 10px;
 }
+
+
 
 
 
@@ -80,11 +89,15 @@ button {
 
 
 
+
+
 svg {
     width: 16px;
     height: 16px;
     margin-right: 10px;
 }
+
+
 
 
 
@@ -108,6 +121,8 @@ tbody tr td {
 tbody td p {
     margin: 0;
 }
+
+
 
 
 
@@ -173,6 +188,14 @@ input[type="submit"]:hover,
 .primaryButton:hover {
     box-shadow: var(--buttonHoverShadow);
 }
+.primaryButton.danger {
+    background-color: var(--dangerColor);
+}
+.primaryButton.danger:hover {
+    box-shadow: 0 8px 25px -8px var(--dangerColor);;
+}
+
+
 
 
 
@@ -214,11 +237,15 @@ input[type="submit"]:hover,
 
 
 
+
+
 /* ============= For Dashboard Layout ============= */
 .dashboardArea {
     display: flex;
     width: 100%;
 }
+
+
 
 
 
@@ -258,6 +285,8 @@ input[type="submit"]:hover,
 
 
 
+
+
 /* ============= For Main Content ============= */
 .mainArea {
     width: calc(100% - 250px);
@@ -270,6 +299,8 @@ input[type="submit"]:hover,
 
 
 
+
+
 /* ============= For Title Area ============= */
 .titleArea {
     display: flex;
@@ -278,7 +309,6 @@ input[type="submit"]:hover,
     padding: 10px 20px;
     background-color: var(--bgColor);
     border-radius: 5px;
-    /* box-shadow: var(--boxShadow); */
 }
 .titleArea .title {
     margin-bottom: 0;
@@ -338,12 +368,16 @@ input[type="submit"]:hover,
 
 
 
+
+
 .contentArea {
     padding: 20px;
     background-color: var(--bgColor);
     border-radius: 5px;
     margin-top: 20px;
 }
+
+
 
 
 
@@ -394,6 +428,8 @@ input[type="submit"]:hover,
 .userListBody tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--borderColorLight);
 }
+
+
 
 
 
@@ -490,10 +526,16 @@ input[type="submit"]:hover,
 }
 
 
+
+
+
 .userDetailArea .rightSide {
     width: calc(100% - 400px);
     margin-left: 400px;
 }
+
+
+
 
 
 /* ============= Responsive Design ============= */
@@ -517,6 +559,10 @@ input[type="submit"]:hover,
         padding: 25px;
     }
 }
+
+
+
+
 
 @media (max-width: 767px) {
     :root {
@@ -544,7 +590,7 @@ input[type="submit"]:hover,
     }
 
 
-    /* For sign in */
+    /* ========== For sign in ========== */
     .signInArea .card {
         max-width: 300px;
         padding: 25px 20px;
@@ -563,7 +609,7 @@ input[type="submit"]:hover,
     }
 
 
-    /* For dashboard */
+    /* ========== For dashboard ========== */
     .dashboardArea {
         flex-direction: column-reverse;
     }
