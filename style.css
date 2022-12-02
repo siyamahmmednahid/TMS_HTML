@@ -538,6 +538,44 @@ input[type="submit"]:hover,
 
 
 
+/* ============= For Add Form ============= */
+.addFormArea {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    z-index: 9;
+}
+.addFormArea::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: var(--titleColor);
+    opacity: 0.8;
+}
+.addFormArea .popUp {
+    width: 340px;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    right: 0;
+    margin: 0;
+    padding: 30px;
+    z-index: 10;
+    border-radius: 0;
+}
+.addFormArea .popUp .contentArea {
+    padding: 30px;
+    height: 100%;
+    overflow-y: auto;
+}
+
+
+
+
+
 /* ============= Responsive Design ============= */
 @media (max-width: 1299px) {
     .sidebarArea {
