@@ -381,6 +381,147 @@ input[type="submit"]:hover,
 
 
 
+/* ============= For Todo ============= */
+.todoArea {
+    display: flex;
+    gap: 30px;
+}
+.todoArea .leftSide{
+    width: 240px;
+    border-right: 1px solid var(--borderColorLight);
+    padding-right: 25px;
+}
+.todoArea .leftSide .tabs {
+    margin: 20px 0;
+}
+.todoArea .leftSide .tabs li {
+    position: relative;
+}
+.todoArea .leftSide .tabs li.active::before {
+    content: '';
+    position: absolute;
+    top: -2px;
+    left: -20px;
+    width: 2px;
+    height: calc(100% + 4px);
+    background-color: var(--primaryColor);
+}
+.todoArea .leftSide .tabs li.active a {
+    color: var(--primaryColor);
+}
+.todoArea .leftSide .tabs a {
+    display: flex;
+    align-items: center;
+    line-height: 30px;
+}
+.todoArea .leftSide .tags {
+    margin-top: 35px;
+}
+.todoArea .leftSide .tags .tagTitle {
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin-bottom: 20px;
+}
+.todoArea .leftSide .tags li {
+    position: relative;
+    padding-left: 20px;
+}
+.todoArea .leftSide .tags li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+}
+.todoArea .leftSide .tags li.low::before {
+    background-color: var(--successColor);
+}
+.todoArea .leftSide .tags li.medium::before {
+    background-color: var(--warningColor);
+}
+.todoArea .leftSide .tags li.high::before {
+    background-color: var(--dangerColor);
+}
+.todoArea .leftSide .tags li a {
+    line-height: 24px;
+}
+
+
+
+.todoArea .rightSide {
+    width: calc(100% - 240px);
+}
+.todoArea .rightSide .taskList li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 0;
+    margin: 0;
+}
+.todoArea .rightSide .taskList li:not(:last-child) {
+    border-bottom: 1px solid var(--borderColorLight);
+}
+.todoArea .rightSide .taskDetails {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.todoArea .rightSide .taskDetails .taskTag {
+    position: relative;
+    padding: 3px 8px;
+    font-size: var(--textFontSm);
+    font-weight: var(--fontMedium);
+    color: var(--primaryColor);
+}
+.todoArea .rightSide .taskDetails .taskTag::before {
+    content: '';
+    background: var(--primaryColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0.1;
+}
+.todoArea .rightSide .taskDetails .taskTag.low {
+    color: var(--successColor);
+}
+.todoArea .rightSide .taskDetails .taskTag.low::before {
+    background: var(--successColor);
+}
+.todoArea .rightSide .taskDetails .taskTag.medium {
+    color: var(--warningColor);
+}
+.todoArea .rightSide .taskDetails .taskTag.medium::before {
+    background: var(--warningColor);
+}
+.todoArea .rightSide .taskDetails .taskTag.high {
+    color: var(--dangerColor);
+}
+.todoArea .rightSide .taskDetails .taskTag.high::before {
+    background: var(--dangerColor);
+}
+.todoArea .rightSide .taskDetails .taskDate {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+}
+.todoArea .rightSide .taskDetails .userThumbnail {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+}
+
+
+
+
+
 /* ============= For User List ============= */
 .userListHeader {
     display: flex;
