@@ -16,21 +16,54 @@
             <h3 class="title">Add Information</h3>
             <form action="userDetail.php" method="POST">
                 <div class="inputBox">
-                    <label>Username</label>
-                    <input type="text" name="username" required placeholder="john@example.com">
+                    <label>Employee ID</label>
+                    <input type="text" name="emplyeeid" required placeholder="Employee ID">
                 </div>
                 <div class="inputBox">
-                    <label>Password</label>
-                    <input type="password" name="password" required placeholder="********">
+                    <label>Phone</label>
+                    <input type="text" name="phone" required placeholder="Phone">
                 </div>
-                <input type="submit" name="submit" value="Sign In">
+                <div class="inputBox">
+                    <label>Designation</label>
+                    <input type="text" name="designation" required placeholder="Designation">
+                </div>
+                <div class="inputBox">
+                    <label>Department</label>
+                    <input type="text" name="department" required placeholder="Department">
+                </div>
+                <div class="inputBox">
+                    <label>Gender</label>
+                    <select name="gender" id="Gender">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <label>Blood Group</label>
+                    <select name="bloodgroup" id="BloodGroup">
+                        <option value="A+">A+</option>
+                        <option value="A-">A-</option>
+                        <option value="B+">B+</option>
+                        <option value="B-">B-</option>
+                        <option value="AB+">AB+</option>
+                        <option value="AB-">AB-</option>
+                        <option value="O+">O+</option>
+                        <option value="O-">O-</option>
+                    </select>
+                </div>
+                <div class="inputBox">
+                    <label>Date of Birth</label>
+                    <input type="date" name="dob" required placeholder="Date of Birth">
+                </div>
+                <input type="submit" name="submit" value="Save">
             </form>
         </div>
     </section>
 
 
 
-
+ 
 
     <section class="dashboardArea">
         <aside class="sidebarArea">
