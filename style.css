@@ -1,6 +1,6 @@
 :root {
     --primaryColor: #7367f0;
-    --primaryColorLight: rgb(115, 103, 240, 0.5);
+    --primaryColorLight: rgb(115, 103, 240, 0.2);
     --secondaryColor: #ffffff;
     --titleColor: #1e272e;
     --textColor: #485460;
@@ -625,7 +625,7 @@ input[type="submit"]:hover,
     align-items: center;
     gap: 15px;
 }
-.emailDetailArea .detailHeader .emailActions svg {
+.emailDetailArea .detailHeader .emailActions .button svg {
     margin: 0;
     stroke: var(--textColorLight);
 }
@@ -636,9 +636,95 @@ input[type="submit"]:hover,
     position: absolute;
     right: 0;
     top: 30px;
+    padding: 5px 0;
+    width: 160px;
     background: var(--bgColor);
-    padding: 10px;
+    box-shadow: var(--boxShadow);
     z-index: 9;
+    display: none;
+}
+.emailDetailArea .detailHeader .emailActions .dropdown li {
+    padding: 0;
+    margin: 0;
+    border: none;
+    transition: all 0.3s;
+}
+.emailDetailArea .detailHeader .emailActions .dropdown li a {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
+    line-height: 36px;
+    padding: 0 15px;
+    font-weight: var(--fontRegular);
+}
+.emailDetailArea .detailHeader .emailActions .dropdown svg {
+    margin: 0;
+    width: 14px;
+}
+.emailDetailArea .detailHeader .emailActions .dropdown li:hover {
+    background: var(--primaryColorLight);
+}
+.emailDetailArea .emailDetail {
+    background: var(--bodyBgColor);
+    padding: 20px;
+    border-radius: 5px;
+}
+.emailDetailArea .emailDetail:not(:last-child) {
+    margin: 0 0 20px;
+}
+.emailDetailArea .emailDetail .header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 0 0 15px;
+    border-bottom: 1px solid var(--borderColor);
+    margin-bottom: 10px;
+}
+.emailDetailArea .emailDetail .senderInfo {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.emailDetailArea .emailDetail .senderInfo .thumb {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+}
+.emailDetailArea .emailDetail .senderInfo .details {
+    display: flex;
+    flex-direction: column;
+}
+.emailDetailArea .emailDetail .senderInfo .details .name {
+    font-size: var(--textFont);
+    font-weight: var(--fontSemiBold);
+    margin: 0;
+}
+.emailDetailArea .emailDetail .senderInfo .details .email {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 5px 0 0;
+}
+.emailDetailArea .emailDetail .header .emailDate {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
+}
+.emailDetailArea .emailDetail .emailBody {
+    width: 100%;
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+}
+.emailDetailArea .emailDetail .emailBody p {
+    margin: 0 0 15px;
+}
+.emailDetailArea .emailDetail .emailBody p:last-child {
+    margin: 0;
 }
 
 
