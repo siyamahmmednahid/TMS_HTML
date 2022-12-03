@@ -162,7 +162,6 @@ select {
 }
 textarea {
     height: 100px;
-    padding: 10px;
 }
 input::placeholder, textarea::placeholder {
     color: var(--placeholderColorLight);
@@ -171,6 +170,8 @@ input::placeholder, textarea::placeholder {
 
 input[type="submit"],
 .primaryButton {
+    display: inline-block;
+    text-align: center;
     width: 100%;
     height: 38px;
     line-height: 38px;
@@ -186,6 +187,7 @@ input[type="submit"],
 }
 input[type="submit"]:hover,
 .primaryButton:hover {
+    color: var(--secondaryColor);
     box-shadow: var(--buttonHoverShadow);
 }
 .primaryButton.danger {
@@ -586,6 +588,133 @@ input[type="submit"]:hover,
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin: 0;
+}
+
+
+
+
+
+.emailDetailArea .detailHeader {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    border-bottom: 1px solid var(--borderColorLight);
+    padding: 0 0 15px;
+}
+.emailDetailArea .detailHeader .detailHeaderLeft {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.emailDetailArea .detailHeader .detailHeaderLeft svg {
+    margin: 5px 0 0 0;
+}
+.emailDetailArea .detailHeader .emailSubject {
+    font-size: var(--textFont);
+    font-weight: var(--fontSemiBold);
+    color: var(--titleColor);
+    margin: 0;
+}
+.emailDetailArea .detailHeader .detailHeaderRight {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.emailDetailArea .detailHeader .emailActions {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+.emailDetailArea .detailHeader .emailActions svg {
+    margin: 0;
+    stroke: var(--textColorLight);
+}
+.emailDetailArea .detailHeader .emailActions .dropdown {
+    position: relative;
+}
+.emailDetailArea .detailHeader .emailActions .dropdown ul {
+    position: absolute;
+    right: 0;
+    top: 30px;
+    background: var(--bgColor);
+    padding: 10px;
+    z-index: 9;
+}
+
+
+
+
+
+
+.composeArea {
+    position: fixed;
+    right: 30px;
+    bottom: 30px;
+    width: 100%;
+    max-width: 640px;
+    box-shadow: 0 0 20px var(--borderColor);
+    padding: 0;
+}
+.composeArea .headerArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 15px;
+    background: var(--bodyBgColor);
+}
+.composeArea .headerArea .title {
+    margin: 0;
+}
+.composeArea .headerArea .iconArea {
+    display: flex;
+    gap: 10px;
+}
+.composeArea .headerArea svg {
+    width: 14px;
+    height: 14px;
+    cursor: pointer;
+    margin: 0;
+}
+.composeArea .composeBody {
+    padding: 0 0 10px;
+}
+.composeArea .composeBody .inputBox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    border-bottom: 1px solid var(--borderColorLight);
+    margin: 0;
+    padding: 0 15px;
+}
+.composeArea .composeBody .inputBox label,
+.composeArea .composeBody .inputBox span {
+    font-size: var(--textFont);
+    color: var(--textColor);
+    margin: 0;
+}
+.composeArea .composeBody .inputBox input,
+.composeArea .composeBody .inputBox textarea {
+    border: none;
+    outline: none;
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+    box-shadow: none;
+    padding: 0;
+}
+.composeArea .composeBody .inputBox textarea {
+    resize: none;
+    width: 100%;
+    height: 200px;
+    padding: 10px 0;
+}
+.composeArea .composeBody .inputBox textarea::placeholder {
+    color: var(--textColor);
+}
+.composeArea .composeBody .primaryButton {
+    width: auto;
+    padding: 0 25px;
+    margin: 10px 0 0 20px;
 }
 
 
