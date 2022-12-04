@@ -807,6 +807,142 @@ input[type="submit"]:hover,
 
 
 
+/* ============= For Chat ============= */
+.chatArea {
+    display: flex;
+    padding: 0;
+    height: calc(100vh - 140px);
+}
+.chatArea .userThumb {
+    position: relative;
+    width: 40px;
+    height: 40px;
+}
+.chatArea .userThumb::after {
+    content: '';
+    position: absolute;
+    right: -1px;
+    bottom: -1px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--successColor);
+    border: 2px solid var(--bgColor);
+}
+.chatArea .userThumb.offline::after {
+    background: var(--dangerColor);
+}
+.chatArea .userThumb img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+.chatArea .leftSide {
+    width: 320px;
+    border-right: 1px solid var(--borderColorLight);
+    padding: 0 0 20px;
+}
+.chatArea .leftSide .header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid var(--borderColorLight);
+}
+.chatArea .leftSide .header .search {
+    width: calc(100% - 55px);
+    position: relative;
+}
+.chatArea .leftSide .header .search input {
+    padding: 0 10px 0 35px;
+}
+.chatArea .leftSide .header .search svg {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    stroke: var(--textColorLight);
+}
+.chatArea .leftSide .chatList .title,
+.chatArea .leftSide .contactList .title {
+    font-size: var(--textFont);
+    font-weight: var(--fontSemiBold);
+    color: var(--textColor);
+    padding: 15px 15px 5px;
+    margin: 0;
+}
+.chatArea .leftSide .chatList li,
+.chatArea .leftSide .contactList li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 10px 15PX;
+    margin: 0;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+.chatArea .leftSide .chatList li:hover,
+.chatArea .leftSide .contactList li:hover {
+    background: var(--primaryColor);
+    color: var(--secondaryColor);
+}
+.chatArea .leftSide .chatList .chatDetails,
+.chatArea .leftSide .contactList .contactDetails {
+    width: calc(100% - 120px);
+}
+.chatArea .leftSide .chatList .chatDetails .userName,
+.chatArea .leftSide .contactList .contactDetails .userName {
+    color: var(--textColor);
+    font-weight: var(--fontMedium);
+    margin: 0;
+    transition: all 0.3s;
+}
+.chatArea .leftSide .chatList .chatDetails .lastMessage,
+.chatArea .leftSide .contactList .contactDetails .designation {
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 5px 0 0;
+    width: 100%;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    transition: all 0.3s;
+}
+.chatArea .leftSide .chatList .chatTime {
+    opacity: 0.5;
+    font-size: var(--textFontSm);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin: 0;
+    width: 60px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    text-align: right;
+    transition: all 0.3s;
+}
+.chatArea .leftSide .chatList .chatTime p {
+    margin: 0 0 5px;
+}
+.chatArea .leftSide .chatList li:hover .userName,
+.chatArea .leftSide .chatList li:hover .lastMessage,
+.chatArea .leftSide .chatList li:hover .chatTime,
+.chatArea .leftSide .contactList li:hover .userName,
+.chatArea .leftSide .contactList li:hover .designation {
+    color: var(--secondaryColor);
+}
+
+
+
+
+
+
+
+
+
 /* ============= For User List ============= */
 .userListHeader {
     display: flex;
