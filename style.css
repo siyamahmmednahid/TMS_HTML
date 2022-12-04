@@ -937,6 +937,71 @@ input[type="submit"]:hover,
 
 
 
+.chatArea .rightSide {
+    width: calc(100% - 320px);
+}
+.chatArea .rightSide .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 15px;
+    padding: 15px;
+    border-bottom: 1px solid var(--borderColorLight);
+}
+.chatArea .rightSide .header .userDetails {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+.chatArea .rightSide .header .userDetails .userName {
+    font-size: var(--textFont);
+    font-weight: var(--fontMedium);
+    color: var(--textColor);
+    margin: 0;
+}
+.chatArea .rightSide .header .Actions {
+    position: relative;
+}
+.chatArea .rightSide .header .Actions .dropdown {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    width: 120px;
+    background: var(--bgColor);
+    border-radius: 5px;
+    padding: 10px 0;
+    box-shadow: 0 0 10px var(--borderColor);
+    z-index: 1;
+    display: none;
+}
+.chatArea .rightSide .header .Actions .dropdown::before {
+    content: '';
+    position: absolute;
+    top: -10px;
+    right: 10px;
+    width: 0;
+    height: 0;
+    border-left: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-bottom: 10px solid var(--bgColor);
+}
+.chatArea .rightSide .header .Actions .dropdown li {
+    margin: 0;
+    transition: all 0.3s;
+}
+.chatArea .rightSide .header .Actions .dropdown li:hover {
+    background: var(--primaryColorLight);
+}
+.chatArea .rightSide .header .Actions .dropdown a {
+    display: block;
+    line-height: 30px;
+    padding: 0 15px;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+
+
 
 
 
