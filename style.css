@@ -1123,6 +1123,7 @@ input[type="submit"]:hover,
 }
 .userListBody .Actions {
     width: 110px;
+    text-align: center;
 }
 .userListBody .User {
     display: flex;
