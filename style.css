@@ -236,6 +236,11 @@ input[type="submit"]:hover,
     right: -46px;
     z-index: -1;
 }
+.signInArea .card a {
+    display: block;
+    text-align: center;
+    margin-top: 20px;
+}
 
 
 
