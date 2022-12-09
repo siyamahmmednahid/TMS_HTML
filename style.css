@@ -163,11 +163,16 @@ select {
 textarea {
     height: 100px;
 }
+input[type="checkbox"] {
+    width: 14px;
+    height: 14px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
 input::placeholder, textarea::placeholder {
     color: var(--placeholderColorLight);
     font-weight: var(--fontRegular);
 }
-
 input[type="submit"],
 .primaryButton {
     display: inline-block;
@@ -530,6 +535,7 @@ input[type="submit"]:hover,
 
 
 /* ============= For Email ============= */
+/* Email Left Side */
 .emailArea .labels {
     margin-top: 35px;
 }
@@ -570,66 +576,135 @@ input[type="submit"]:hover,
 
 
 
-
-.emailArea .rightSide li {
+/* Email Right Side */
+.emailArea .emailList .header {
+    border-bottom: 1px solid var(--borderColorLight);
+    padding-bottom: 10px;
+}
+.emailArea .emailList .search {
+    position: relative;
+    margin-bottom: 10px;
+}
+.emailArea .emailList .search input {
+    padding: 0 10px 0 35px;
+}
+.emailArea .emailList .search svg {
+    width: 14px;
+    height: 14px;
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    stroke: var(--textColorLight);
+}
+.emailArea .emailList li {
     display: flex;
     align-items: center;
-    justify-content: space-between;
+    justify-content: left;
     gap: 15px;
     padding: 15px 0;
     margin: 0;
 }
-.emailArea .rightSide li:not(:last-child) {
+.emailArea .emailList li:not(:last-child) {
     border-bottom: 1px solid var(--borderColorLight);
 }
-.emailArea .rightSide .emailDetail {
+.emailArea .emailList .buttonArea {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    max-width: 60px;
+}
+.emailArea .emailList .buttonArea input {
+    margin: 0;
+}
+.emailArea .emailList ul .buttonArea .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background: transparent;
+    position: relative;
+}
+.emailArea .emailList ul .buttonArea .button svg {
+    width: 15px;
+    height: 15px;
+    stroke: var(--textColor);
+    margin: 0;
+    transition: all 0.3s;
+}
+.emailArea .emailList ul .buttonArea .button::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: all 0.3s;
+    background: var(--warningColor);
+    opacity: 0;
+}
+.emailArea .emailList ul .buttonArea .button:hover svg {
+    stroke: var(--warningColor);
+}
+.emailArea .emailList .buttonArea .button:hover::after {
+    opacity: 0.1;
+}
+.emailArea .emailList .emailDetail {
     display: flex;
     flex-wrap: wrap;
     gap: 10px;
     align-items: center;
+    width: calc(100% - 170px);
 }
-.emailArea .rightSide .emailDetail .userThumb {
+.emailArea .emailList .emailDetail .userThumb {
     width: 30px;
     height: 30px;
     border-radius: 50%;
 }
-.emailArea .rightSide .emailDetail .emailSender {
+.emailArea .emailList .emailDetail .emailSender {
     font-size: var(--textFont);
     font-weight: var(--fontMedium);
     color: var(--textColor);
     margin: 0 0 5px;
 }
-.emailArea .rightSide .emailDetail .emailSubject {
+.emailArea .emailList .emailDetail .emailSubject {
     font-size: var(--textFontSm);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin: 0;
 }
-.emailArea .rightSide .emailDate {
+.emailArea .emailList .emailDate {
     display: flex;
     gap: 20px;
     align-items: center;
+    justify-content: end;
+    width: 110px;
 }
-.emailArea .rightSide .emailDate .labels {
+.emailArea .emailList .emailDate .labels {
     display: flex;
     gap: 5px;
+    margin: 0;
 }
-.emailArea .rightSide .emailDate .labels span {
+.emailArea .emailList .emailDate .labels span {
     width: 8px;
     height: 8px;
     background: var(--primaryColor);
     border-radius: 50%;
 }
-.emailArea .rightSide .emailDate .labels span.low {
+.emailArea .emailList .emailDate .labels span.personal {
     background: var(--successColor);
 }
-.emailArea .rightSide .emailDate .labels span.medium {
+.emailArea .emailList .emailDate .labels span.important {
     background: var(--warningColor);
 }
-.emailArea .rightSide .emailDate .labels span.high {
+.emailArea .emailList .emailDate .labels span.private {
     background: var(--dangerColor);
 }
-.emailArea .rightSide .emailDate .date {
+.emailArea .emailList .emailDate .date {
     font-size: var(--textFontSm);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
@@ -640,7 +715,7 @@ input[type="submit"]:hover,
 
 
 
-
+/* Email Detail Area */
 .emailDetailArea .detailHeader {
     display: flex;
     align-items: center;
@@ -758,7 +833,7 @@ input[type="submit"]:hover,
 }
 
 
-
+/* Email body */
 .emailDetailArea .emailDetail {
     background: var(--bodyBgColor);
     padding: 20px;
@@ -825,7 +900,7 @@ input[type="submit"]:hover,
 
 
 
-
+/* Email Compose Area */
 .composeArea {
     position: fixed;
     right: 30px;
