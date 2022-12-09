@@ -535,6 +535,11 @@ input[type="submit"]:hover,
 
 
 /* ============= For Email ============= */
+.todoArea,
+.emailArea {
+    display: flex;
+    height: calc(100vh - 140px);
+}
 /* Email Left Side */
 .emailArea .labels {
     margin-top: 35px;
@@ -597,6 +602,24 @@ input[type="submit"]:hover,
     transform: translateY(-50%);
     stroke: var(--textColorLight);
 }
+.emailArea .emailList .header .buttonArea {
+    display: flex;
+    gap: 15px;
+    align-items: center;
+    padding: 10px 0;
+}
+.emailArea .emailList .header .button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.emailArea .emailList .header .button svg {
+    stroke: var(--textColor);
+    margin: 0;
+}
+.emailArea .emailList .header .button svg:hover {
+    stroke: var(--primaryColor);
+}
 .emailArea .emailList li {
     display: flex;
     align-items: center;
@@ -608,7 +631,7 @@ input[type="submit"]:hover,
 .emailArea .emailList li:not(:last-child) {
     border-bottom: 1px solid var(--borderColorLight);
 }
-.emailArea .emailList .buttonArea {
+.emailArea .emailList ul .buttonArea {
     display: flex;
     gap: 10px;
     align-items: center;
@@ -1271,6 +1294,9 @@ input[type="submit"]:hover,
 
 
 /* ============= For User List ============= */
+.userList {
+    height: calc(100vh - 140px);
+}
 .userListHeader {
     display: flex;
     justify-content: space-between;
