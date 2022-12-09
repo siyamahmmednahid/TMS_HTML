@@ -530,6 +530,47 @@ input[type="submit"]:hover,
 
 
 /* ============= For Email ============= */
+.emailArea .labels {
+    margin-top: 35px;
+}
+.emailArea .labels .labelTitle {
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColorLight);
+    margin-bottom: 20px;
+}
+.emailArea .labelList li {
+    position: relative;
+    padding-left: 20px;
+}
+.emailArea .labelList li::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 0;
+    transform: translateY(-50%);
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+}
+.emailArea .labelList li.personal::before {
+    background-color: var(--successColor);
+}
+.emailArea .labelList li.important::before {
+    background-color: var(--warningColor);
+}
+.emailArea .labelList li.private::before {
+    background-color: var(--dangerColor);
+}
+.emailArea .labelList li a {
+    line-height: 24px;
+}
+
+
+
+
+
 .emailArea .rightSide li {
     display: flex;
     align-items: center;
@@ -606,6 +647,8 @@ input[type="submit"]:hover,
     justify-content: space-between;
     border-bottom: 1px solid var(--borderColorLight);
     padding: 0 0 15px;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 .emailDetailArea .detailHeader .detailHeaderLeft {
     display: flex;
@@ -640,10 +683,9 @@ input[type="submit"]:hover,
 }
 .emailDetailArea .detailHeader .emailActions .dropdown ul {
     position: absolute;
-    right: 0;
+    right: -10px;
     top: 30px;
     padding: 5px 0;
-    width: 160px;
     background: var(--bgColor);
     box-shadow: var(--boxShadow);
     z-index: 9;
@@ -661,7 +703,7 @@ input[type="submit"]:hover,
     gap: 10px;
     width: 100%;
     line-height: 36px;
-    padding: 0 15px;
+    padding: 0 20px;
     font-weight: var(--fontRegular);
 }
 .emailDetailArea .detailHeader .emailActions .dropdown svg {
@@ -671,6 +713,52 @@ input[type="submit"]:hover,
 .emailDetailArea .detailHeader .emailActions .dropdown li:hover {
     background: var(--primaryColorLight);
 }
+
+.emailDetailArea .labelsArea {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin: 20px 0;
+}
+.emailDetailArea .labelsArea a {
+    position: relative;
+    padding: 3px 8px;
+    font-size: var(--textFontSm);
+    font-weight: var(--fontMedium);
+    color: var(--primaryColor);
+}
+.emailDetailArea .labelsArea a::before {
+    content: '';
+    background: var(--primaryColor);
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 5px;
+    opacity: 0.1;
+}
+.emailDetailArea .labelsArea a.personal {
+    color: var(--successColor);
+}
+.emailDetailArea .labelsArea a.personal::before {
+    background: var(--successColor);
+}
+.emailDetailArea .labelsArea a.important {
+    color: var(--warningColor);
+}
+.emailDetailArea .labelsArea a.important::before {
+    background: var(--warningColor);
+}
+.emailDetailArea .labelsArea a.private {
+    color: var(--dangerColor);
+}
+.emailDetailArea .labelsArea a.private::before {
+    background: var(--dangerColor);
+}
+
+
+
 .emailDetailArea .emailDetail {
     background: var(--bodyBgColor);
     padding: 20px;
@@ -686,7 +774,7 @@ input[type="submit"]:hover,
     justify-content: space-between;
     gap: 15px;
     padding: 0 0 15px;
-    border-bottom: 1px solid var(--borderColor);
+    border-bottom: 1px solid var(--borderColorLight);
     margin-bottom: 10px;
 }
 .emailDetailArea .emailDetail .senderInfo {
