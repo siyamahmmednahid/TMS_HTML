@@ -245,6 +245,7 @@ input[type="submit"]:hover,
     display: block;
     text-align: center;
     margin-top: 20px;
+    font-size: var(--textFont);
 }
 
 
