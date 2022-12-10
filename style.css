@@ -201,6 +201,12 @@ input[type="submit"]:hover,
 .primaryButton.danger:hover {
     box-shadow: 0 8px 25px -8px var(--dangerColor);;
 }
+.primaryButton.warning {
+    background-color: var(--warningColor);
+}
+.primaryButton.warning:hover {
+    box-shadow: 0 8px 25px -8px var(--warningColor);;
+}
 
 
 
@@ -461,15 +467,60 @@ input[type="submit"]:hover,
 .todoArea .rightSide {
     width: calc(100% - 240px);
 }
+.todoArea .rightSide .header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    border-bottom: 1px solid var(--borderColorLight);
+    padding-bottom: 15px;
+    margin-bottom: 10px;
+}
+.todoArea .rightSide .header .menuButton {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+.todoArea .rightSide .header .menuButton span {
+    height: 1px;
+    width: 18px;
+    background-color: var(--textColor);
+}
+.todoArea .rightSide .header .search {
+    position: relative;
+    width: 100%;
+    z-index: 1;
+}
+.todoArea .rightSide .header .search input {
+    padding: 0 10px 0 35px;
+    background: transparent;
+}
+.todoArea .rightSide .header .search svg {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    transform: translateY(-50%);
+    font-size: var(--textFont);
+    color: var(--textColorLight);
+    z-index: -1;
+}
 .todoArea .rightSide .taskList li {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-wrap: wrap;
+    gap: 10px;
     padding: 10px 0;
     margin: 0;
 }
 .todoArea .rightSide .taskList li:not(:last-child) {
     border-bottom: 1px solid var(--borderColorLight);
+}
+.todoArea .rightSide .titleArea {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
 }
 .todoArea .rightSide .taskDetails {
     display: flex;
@@ -491,7 +542,7 @@ input[type="submit"]:hover,
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     opacity: 0.1;
 }
 .todoArea .rightSide .taskDetails .taskTag.low {
@@ -839,7 +890,7 @@ input[type="submit"]:hover,
     left: 0;
     width: 100%;
     height: 100%;
-    border-radius: 5px;
+    border-radius: 3px;
     opacity: 0.1;
 }
 .emailDetailArea .labelsArea a.personal {
@@ -1148,6 +1199,19 @@ input[type="submit"]:hover,
     align-items: center;
     gap: 10px;
 }
+.chatArea .rightSide .header .userDetails .backButton {
+    display: none;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    margin-right: 10px;
+}
+.chatArea .rightSide .header .userDetails .backButton svg {
+    width: 14px;
+    height: 14px;
+    stroke: var(--textColorLight);
+    margin: 0;
+}
 .chatArea .rightSide .header .userDetails .userName {
     font-size: var(--textFont);
     font-weight: var(--fontMedium);
@@ -1308,15 +1372,6 @@ input[type="submit"]:hover,
     border-collapse: collapse;
     text-align: left;
 }
-.userListBody .Designation,
-.userListBody .Status,
-.userListBody .Actions {
-    max-width: 200px;
-}
-.userListBody .Actions {
-    width: 110px;
-    text-align: center;
-}
 .userListBody .User {
     display: flex;
     align-items: center;
@@ -1338,6 +1393,37 @@ input[type="submit"]:hover,
     color: var(--textColorLight);
     margin: 0;
 }
+.userListBody .Designation,
+.userListBody .Status,
+.userListBody .Actions {
+    max-width: 200px;
+}
+.userListBody tbody .Status span {
+    color:  var(--successColor);
+    padding: 2px 5px;
+    position: relative;
+}
+.userListBody tbody .Status span:before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    border-radius: 3px;
+    background: var(--successColor);
+    opacity: 0.1;
+}
+.userListBody tbody .Status.deactive span {
+    color: var(--dangerColor);
+}
+.userListBody tbody .Status.deactive span:before {
+    background: var(--dangerColor);
+}
+.userListBody .Actions {
+    width: 110px;
+    text-align: center;
+}
 .userListBody tbody tr:not(:last-child) {
     border-bottom: 1px solid var(--borderColorLight);
 }
@@ -1354,11 +1440,13 @@ input[type="submit"]:hover,
     gap: 34px;
 }
 .userDetailArea .leftSide {
+    height: calc(100vh - 140px);
     width: 380px;
     position: fixed;
 }
 .userDetailArea .leftSide .contentArea {
     padding: 40px 30px 30px;
+    height: 100%;
 }
 .userDetailArea .userIdentity {
     text-align: center;
@@ -1429,6 +1517,7 @@ input[type="submit"]:hover,
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
     gap: 10px;
     padding-top: 20px;
     border-top: 1px solid var(--borderColorLight);
@@ -1441,8 +1530,17 @@ input[type="submit"]:hover,
 
 /* Right side */
 .userDetailArea .rightSide {
+    height: calc(100vh - 140px);
     width: calc(100% - 400px);
     margin-left: 400px;
+    overflow-y: scroll;
+}
+.userDetailArea .rightSide .title {
+    font-size: var(--textFont);
+    font-weight: var(--fontMedium);
+    padding: 0 0 10px;
+    border-bottom: 1px solid var(--borderColorLight);
+    margin: 0 0 20px;
 }
 
 
@@ -1593,14 +1691,25 @@ input[type="submit"]:hover,
     }
 
 
-    /* ========== For email ========== */
-    .emailArea {
+    /* ========== For todo ========== */
+    .todoArea {
         height: calc(100vh - 210px);
         flex-direction: column;
         position: relative;
         overflow: hidden;
     }
-    .emailArea .leftSide {
+    .todoArea::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--titleColor);
+        opacity: 0;
+        z-index: 1;
+    }
+    .todoArea .leftSide {
         width: 230px;
         height: 100%;
         position: absolute;
@@ -1608,8 +1717,25 @@ input[type="submit"]:hover,
         left: 0;
         padding: 20px;
         background: var(--bgColor);
-        z-index: 1;
+        border: none;
+        z-index: 2;
         left: -230px;
+    }
+    .todoArea .rightSide {
+        width: 100%;
+        margin-left: 0;
+    }
+    .todoArea .rightSide .header .menuButton {
+        display: flex;
+    }
+
+
+    /* ========== For email ========== */
+    .emailArea {
+        height: calc(100vh - 210px);
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
     }
     .emailArea::after {
         content: "";
@@ -1621,6 +1747,18 @@ input[type="submit"]:hover,
         background-color: var(--titleColor);
         z-index: 0;
         opacity: 0;
+    }
+    .emailArea .leftSide {
+        width: 230px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: var(--bgColor);
+        border: none;
+        z-index: 1;
+        left: -230px;
     }
     .emailArea .rightSide {
         width: 100%;
@@ -1644,7 +1782,6 @@ input[type="submit"]:hover,
         position: absolute;
         top: 0;
         left: 0;
-        padding: 20px;
         background: var(--bgColor);
         z-index: 1;
         left: -100%;
@@ -1653,5 +1790,43 @@ input[type="submit"]:hover,
         width: 100%;
         height: 100%;
         margin-left: 0;
+    }
+    .chatArea .rightSide .header .userDetails .backButton {
+        display: flex;
+    }
+
+
+    /* ========== For user list ========== */
+    .userList {
+        height: calc(100vh - 210px);
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    .userList .userListBody {
+        overflow-x: scroll;
+    }
+    .userList .userListBody .userListTable {
+        min-width: 520px;
+        overflow-x: scroll;
+    }
+
+
+    /* ========== For user detail ========== */
+    .userDetailArea {
+        flex-direction: column;
+        gap: 0;
+        padding-bottom: 80px;
+    }
+    .userDetailArea .leftSide {
+        width: 100%;
+        position: unset;
+        height: auto;
+    }
+    .userDetailArea .rightSide {
+        height: auto;
+        width: 100%;
+        margin-left: 0;
+        overflow-y: auto;
     }
 }
