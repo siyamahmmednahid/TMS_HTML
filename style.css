@@ -259,10 +259,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
-/* ============= For Sidebar ============= */
+/* For Sidebar */
 .sidebarArea .logo {
     margin-bottom: 30px;
 }
@@ -297,10 +294,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
-/* ============= For Main Content ============= */
+/* For Main Content */
 .mainArea {
     width: calc(100% - 250px);
     padding: 30px;
@@ -311,10 +305,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
-/* ============= For Title Area ============= */
+/* For Title Area */
 .titleArea {
     display: flex;
     justify-content: space-between;
@@ -380,9 +371,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
+/* Content Area */
 .contentArea {
     padding: 20px;
     background-color: var(--bgColor);
@@ -399,6 +388,9 @@ input[type="submit"]:hover,
     display: flex;
     gap: 30px;
 }
+
+
+/* Left side */
 .todoArea .leftSide{
     width: 240px;
     border-right: 1px solid var(--borderColorLight);
@@ -465,7 +457,7 @@ input[type="submit"]:hover,
 }
 
 
-
+/* Right side */
 .todoArea .rightSide {
     width: calc(100% - 240px);
 }
@@ -541,6 +533,8 @@ input[type="submit"]:hover,
     display: flex;
     height: calc(100vh - 140px);
 }
+
+
 /* Email Left Side */
 .emailArea .labels {
     margin-top: 35px;
@@ -580,16 +574,31 @@ input[type="submit"]:hover,
 }
 
 
-
-
 /* Email Right Side */
 .emailArea .emailList .header {
     border-bottom: 1px solid var(--borderColorLight);
     padding-bottom: 10px;
 }
+.emailArea .emailList .headerTop {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 10px;
+}
+.emailArea .emailList .headerTop .menuButton {
+    display: none;
+    flex-direction: column;
+    gap: 5px;
+}
+.emailArea .emailList .headerTop .menuButton span {
+    height: 1px;
+    width: 18px;
+    background-color: var(--textColor);
+}
 .emailArea .emailList .search {
     position: relative;
-    margin-bottom: 10px;
+    width: 100%;
 }
 .emailArea .emailList .search input {
     padding: 0 10px 0 35px;
@@ -736,9 +745,6 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
 /* Email Detail Area */
 .emailDetailArea .detailHeader {
     display: flex;
@@ -812,7 +818,6 @@ input[type="submit"]:hover,
 .emailDetailArea .detailHeader .emailActions .dropdown li:hover {
     background: var(--primaryColorLight);
 }
-
 .emailDetailArea .labelsArea {
     display: flex;
     align-items: center;
@@ -919,9 +924,6 @@ input[type="submit"]:hover,
 .emailDetailArea .emailDetail .emailBody p:last-child {
     margin: 0;
 }
-
-
-
 
 
 /* Email Compose Area */
@@ -1129,7 +1131,7 @@ input[type="submit"]:hover,
 }
 
 
-
+/* Right side */
 .chatArea .rightSide {
     width: calc(100% - 320px);
 }
@@ -1194,7 +1196,7 @@ input[type="submit"]:hover,
 }
 
 
-
+/* Right side body */
 .chatArea .rightSide .body {
     padding: 20px;
     height: calc(100% - 140px);
@@ -1264,8 +1266,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
+/* Right side footer */
 .chatArea .rightSide .footer {
     display: flex;
     align-items: center;
@@ -1284,11 +1285,6 @@ input[type="submit"]:hover,
 .chatArea .rightSide .footer .button svg {
     margin: 11px 0 0;
 }
-
-
-
-
-
 
 
 
@@ -1443,9 +1439,7 @@ input[type="submit"]:hover,
 }
 
 
-
-
-
+/* Right side */
 .userDetailArea .rightSide {
     width: calc(100% - 400px);
     margin-left: 400px;
@@ -1596,5 +1590,68 @@ input[type="submit"]:hover,
     }
     .mainArea {
         width: 100%;
+    }
+
+
+    /* ========== For email ========== */
+    .emailArea {
+        height: calc(100vh - 210px);
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    .emailArea .leftSide {
+        width: 230px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: var(--bgColor);
+        z-index: 1;
+        left: -230px;
+    }
+    .emailArea::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: var(--titleColor);
+        z-index: 0;
+        opacity: 0;
+    }
+    .emailArea .rightSide {
+        width: 100%;
+        margin-left: 0;
+    }
+    .emailArea .emailList .headerTop .menuButton {
+        display: flex;
+    }
+
+
+    /* ========== For chat ========== */
+    .chatArea {
+        height: calc(100vh - 210px);
+        flex-direction: column;
+        position: relative;
+        overflow: hidden;
+    }
+    .chatArea .leftSide {
+        width: 100%;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 20px;
+        background: var(--bgColor);
+        z-index: 1;
+        left: -100%;
+    }
+    .chatArea .rightSide {
+        width: 100%;
+        height: 100%;
+        margin-left: 0;
     }
 }
