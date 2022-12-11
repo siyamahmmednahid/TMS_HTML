@@ -28,6 +28,9 @@
     --fontRegular: 400;
     --fontMedium: 500;
     --fontSemiBold: 600;
+    --lineHeightLg: 26px;
+    --lineHeight: 22px;
+    --lineHeightSm: 18px;
 }
 * {
     box-sizing: border-box;
@@ -42,6 +45,12 @@ body {
     font-weight: var(--fontMedium);
     color: var(--textColor);
     margin: 0 0 20px;
+}
+p, span, ul, li, a, th, td, td, thead, tbody {
+    font-size: var(--textFont);
+    font-weight: var(--fontRegular);
+    color: var(--textColor);
+    line-height: var(--lineHeight);
 }
 .card {
     background: var(--bgColor);
@@ -61,7 +70,6 @@ ul {
 }
 li {
     margin: 0;
-    font-size: var(--textFont);
 }
 li:not(:last-child) {
     margin-bottom: 10px;
@@ -104,17 +112,12 @@ svg {
 thead tr {
     background-color: var(--bodyBgColor);
     font-weight: var(--fontSemiBold);
-    font-size: var(--textFont);
 }
 thead tr th {
     padding: 10px;
 }
-tbody tr {
-    font-size: var(--textFont);
-}
 tbody tr td {
     padding: 10px;
-    font-size: var(--textFont);
     font-weight: var(--fontRegular);
     color: var(--textColor);
 }
@@ -500,7 +503,6 @@ input[type="submit"]:hover,
     top: 50%;
     left: 10px;
     transform: translateY(-50%);
-    font-size: var(--textFont);
     color: var(--textColorLight);
     z-index: -1;
 }
@@ -815,7 +817,6 @@ input[type="submit"]:hover,
     margin: 5px 0 0 0;
 }
 .emailDetailArea .detailHeader .emailSubject {
-    font-size: var(--textFont);
     font-weight: var(--fontSemiBold);
     color: var(--titleColor);
     margin: 0;
@@ -965,9 +966,6 @@ input[type="submit"]:hover,
 }
 .emailDetailArea .emailDetail .emailBody {
     width: 100%;
-    font-size: var(--textFont);
-    font-weight: var(--fontRegular);
-    color: var(--textColor);
 }
 .emailDetailArea .emailDetail .emailBody p {
     margin: 0 0 15px;
@@ -1615,6 +1613,9 @@ input[type="submit"]:hover,
     :root {
         --titleFont: 16px;
         --textFont: 12px;
+        --lineHeightLg: 24px;
+        --lineHeight: 20px;
+        --lineHeightSm: 16px;
     }
     input, textarea, select, input[type="submit"], .primaryButton {
         height: 32px;
