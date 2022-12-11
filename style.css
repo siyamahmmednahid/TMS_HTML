@@ -761,14 +761,12 @@ input[type="submit"]:hover,
 }
 .emailArea .emailList .emailDetail .emailSender {
     font-size: var(--textFont);
+    line-height: var(--lineHeight);
     font-weight: var(--fontMedium);
     color: var(--textColor);
-    margin: 0 0 5px;
+    margin: 0;
 }
 .emailArea .emailList .emailDetail .emailSubject {
-    font-size: var(--textFontSm);
-    font-weight: var(--fontRegular);
-    color: var(--textColorLight);
     margin: 0;
 }
 .emailArea .emailList .emailDate {
@@ -888,6 +886,7 @@ input[type="submit"]:hover,
     position: relative;
     padding: 3px 8px;
     font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
     font-weight: var(--fontMedium);
     color: var(--primaryColor);
 }
@@ -960,15 +959,9 @@ input[type="submit"]:hover,
     font-weight: var(--fontSemiBold);
     margin: 0;
 }
-.emailDetailArea .emailDetail .senderInfo .details .email {
+.emailDetailArea .emailDetail .senderInfo .details .email,
+.emailDetailArea .emailDetail .header .emailDate p {
     font-size: var(--textFontSm);
-    font-weight: var(--fontRegular);
-    color: var(--textColorLight);
-    margin: 5px 0 0;
-}
-.emailDetailArea .emailDetail .header .emailDate {
-    font-size: var(--textFontSm);
-    font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin: 0;
 }
@@ -1034,9 +1027,6 @@ input[type="submit"]:hover,
 .composeArea .composeBody .inputBox textarea {
     border: none;
     outline: none;
-    font-size: var(--textFont);
-    font-weight: var(--fontRegular);
-    color: var(--textColor);
     box-shadow: none;
     padding: 0;
 }
@@ -1121,7 +1111,6 @@ input[type="submit"]:hover,
 .chatArea .leftSide .contactList .title {
     font-size: var(--textFont);
     font-weight: var(--fontSemiBold);
-    color: var(--textColor);
     padding: 15px 15px 5px;
     margin: 0;
 }
