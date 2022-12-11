@@ -44,6 +44,7 @@ body {
     font-size: var(--titleFont);
     font-weight: var(--fontMedium);
     color: var(--textColor);
+    line-height: var(--lineHeightLg);
     margin: 0 0 20px;
 }
 p, span, ul, li, a, th, td, td, thead, tbody {
@@ -135,7 +136,8 @@ tbody td p {
     margin-bottom: 20px;
 }
 label {
-    font-size: 12px;
+    font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
     color: var(--textColor);
     font-weight: var(--fontRegular);
     display: block;
@@ -336,12 +338,14 @@ input[type="submit"]:hover,
 }
 .titleArea .user .userName {
     font-size: var(--textFont);
+    line-height: var(--lineHeight);
     font-weight: var(--fontMedium);
     color: var(--titleColor);
-    margin: 0 0 5px;
+    margin: 0;
 }
 .titleArea .user .userDesignation {
     font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin: 0;
@@ -433,6 +437,7 @@ input[type="submit"]:hover,
 }
 .todoArea .leftSide .tags .tagTitle {
     font-size: var(--textFont);
+    line-height: var(--lineHeight);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin-bottom: 20px;
@@ -533,6 +538,7 @@ input[type="submit"]:hover,
     position: relative;
     padding: 3px 8px;
     font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
     font-weight: var(--fontMedium);
     color: var(--primaryColor);
 }
@@ -567,6 +573,7 @@ input[type="submit"]:hover,
 }
 .todoArea .rightSide .taskDetails .taskDate {
     font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
 }
@@ -594,6 +601,7 @@ input[type="submit"]:hover,
 }
 .emailArea .labels .labelTitle {
     font-size: var(--textFont);
+    line-height: var(--lineHeight);
     font-weight: var(--fontRegular);
     color: var(--textColorLight);
     margin-bottom: 20px;
