@@ -1563,7 +1563,62 @@ input[type="submit"]:hover,
 
 
 
-
+/* Academic Info Area */
+.academicInfo .content,
+.trainingInfo .content {
+    padding-left: 25px;
+    margin-bottom: 20px;
+    position: relative;
+}
+.academicInfo .content::before,
+.trainingInfo .content::before {
+    content: '';
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: var(--primaryColor);
+    border: 2px solid var(--whiteColor);
+    box-shadow: var(--boxShadow);
+    top: 4px;
+    left: 0;
+    z-index: 1;
+}
+.academicInfo .content::after,
+.trainingInfo .content::after {
+    content: '';
+    position: absolute;
+    width: 2px;
+    height: calc(100% + 20px);
+    background-color: var(--borderColorLight);
+    top: 0;
+    left: 4px;
+    z-index: 0;
+}
+.academicInfo .content:last-child::after,
+.trainingInfo .content:last-child::after {
+    height: 100%;
+}
+.academicInfo .content .heading,
+.trainingInfo .content .heading {
+    display: flex;
+    justify-content: space-between;
+}
+.academicInfo .content p,
+.trainingInfo .content p {
+    margin: 0;
+}
+.academicInfo .content .passingYear,
+.trainingInfo .content .year {
+    font-size: var(--textFontSm);
+    line-height: var(--lineHeightSm);
+    color: var(--textColorLight);
+}
+.academicInfo .content .degree,
+.trainingInfo .content .courseTitle {
+    font-weight: var(--fontSemiBold);
+    color: var(--titleColor);
+}
 /* ============= For Add Form ============= */
 .addFormArea {
     position: absolute;
