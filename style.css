@@ -275,7 +275,7 @@ input[type="submit"]:hover,
 
 /* For Sidebar */
 .sidebarArea .logo {
-    margin-bottom: 10px 15px 25px;
+    margin: 10px 15px 25px;
 }
 .sidebarArea .logo img {
     height: 20px;
