@@ -275,12 +275,10 @@ input[type="submit"]:hover,
 
 /* For Sidebar */
 .sidebarArea .logo {
-    margin-bottom: 30px;
+    margin-bottom: 10px 15px 25px;
 }
 .sidebarArea .logo img {
-    /* width: 100%; */
-    /* max-width: 150px; */
-    height: 50px;
+    height: 20px;
 }
 .sidebarArea {
     width: 250px;
