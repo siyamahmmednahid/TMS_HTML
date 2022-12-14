@@ -1456,10 +1456,14 @@ input[type="submit"]:hover,
     align-items: flex-start;
     gap: 34px;
 }
+.userDetailArea .contentArea {
+    margin: 0;
+}
 .userDetailArea .leftSide {
     height: calc(100vh - 140px);
     width: 380px;
     position: fixed;
+    margin-top: 20px;
 }
 .userDetailArea .leftSide .contentArea {
     padding: 40px 30px 30px;
@@ -1551,6 +1555,10 @@ input[type="submit"]:hover,
     width: calc(100% - 400px);
     margin-left: 400px;
     overflow-y: scroll;
+    margin-top: 20px;
+}
+.userDetailArea .rightSide .contentArea:not(:last-child) {
+    margin-bottom: 20px;
 }
 .userDetailArea .rightSide .title {
     font-size: var(--textFont);
@@ -1563,15 +1571,13 @@ input[type="submit"]:hover,
 
 
 
-/* Academic Info Area */
-.academicInfo .content,
-.trainingInfo .content {
+/* Information Area */
+.userDetailArea .contentArea .content {
     padding-left: 25px;
     margin-bottom: 20px;
     position: relative;
 }
-.academicInfo .content::before,
-.trainingInfo .content::before {
+.userDetailArea .contentArea .content::before {
     content: '';
     position: absolute;
     width: 10px;
@@ -1584,8 +1590,7 @@ input[type="submit"]:hover,
     left: 0;
     z-index: 1;
 }
-.academicInfo .content::after,
-.trainingInfo .content::after {
+.userDetailArea .contentArea .content::after {
     content: '';
     position: absolute;
     width: 2px;
@@ -1595,27 +1600,22 @@ input[type="submit"]:hover,
     left: 4px;
     z-index: 0;
 }
-.academicInfo .content:last-child::after,
-.trainingInfo .content:last-child::after {
+.userDetailArea .contentArea .content:last-child::after {
     height: 100%;
 }
-.academicInfo .content .heading,
-.trainingInfo .content .heading {
+.userDetailArea .contentArea .content .heading {
     display: flex;
     justify-content: space-between;
 }
-.academicInfo .content p,
-.trainingInfo .content p {
+.userDetailArea .contentArea .content p {
     margin: 0;
 }
-.academicInfo .content .passingYear,
-.trainingInfo .content .year {
+.userDetailArea .contentArea .content .dateTime {
     font-size: var(--textFontSm);
     line-height: var(--lineHeightSm);
     color: var(--textColorLight);
 }
-.academicInfo .content .degree,
-.trainingInfo .content .courseTitle {
+.userDetailArea .contentArea .content .infoTitle {
     font-weight: var(--fontSemiBold);
     color: var(--titleColor);
 }
